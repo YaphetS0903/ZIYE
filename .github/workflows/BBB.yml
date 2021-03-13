@@ -63,7 +63,7 @@ jobs:
       - name: '运行 【步步宝】'
         if: env.BBB_URL
         run: |
-          cd ~/bbb
+          cd ~/ZIYE
           node Task/bububao.js
         env:
           
