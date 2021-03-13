@@ -56,13 +56,13 @@ jobs:
       - name: npm install
         if: env.BBB_bububaoTOKEN
         run: |
-          cd ~/ZIYEJS
+          cd ~/ZIYEJS/ZIYE
           git checkout ZIYE
           npm install
       - name: '运行 【步步宝】'
         if: env.BBB_bububaoTOKEN
         run: |
-          cd ~/ZIYEJS
+          cd ~/ZIYEJS/ZIYE
           node Task/bububao.js
         env:
           
