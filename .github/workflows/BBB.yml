@@ -43,8 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        BBB_URL: ${{ secrets.BBB_URL }}
-        BBB_HEADER: ${{ secrets.BBB_HEADER }}		
+        BBB_bububaoTOKEN: ${{ secrets.BBB_bububaoTOKEN }}	
         
     steps:
       - name: Checkout
@@ -55,13 +54,13 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.BBB_URL
+        if: env.BBB_bububaoTOKEN
         run: |
           cd ~/ZIYEJS
           git checkout ZIYE
           npm install
       - name: '运行 【步步宝】'
-        if: env.BBB_URL
+        if: env.BBB_bububaoTOKEN
         run: |
           cd ~/ZIYEJS
           node Task/bububao.js
